@@ -1,5 +1,5 @@
 #include <canopen_master/bcm_sync.h>
-#include <socketcan_interface/string.h>
+#include <can_interface/string.h>
 
 int main(int argc, char** argv){
 

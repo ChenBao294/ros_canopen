@@ -1,0 +1,5 @@
+<library path="lib/libcanlib_interface_plugin">
+  <class type="can::CanlibInterface" base_class_type="can::CanlibDriverInterface">
+    <description>Canlib inteface plugin.</description>
+  </class>
+</library>

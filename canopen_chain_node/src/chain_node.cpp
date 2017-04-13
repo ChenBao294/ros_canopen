@@ -1,5 +1,5 @@
-#include <socketcan_interface/dispatcher.h>
-#include <socketcan_interface/socketcan.h>
+#include <can_interface/dispatcher.h>
+#include <can_interface/socketcan.h>
 #include <canopen_chain_node/ros_chain.h>
 
 using namespace can;

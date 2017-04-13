@@ -1,8 +1,8 @@
 #ifndef H_BCM_SYNC
 #define H_BCM_SYNC
 
-#include <socketcan_interface/bcm.h>
-#include <socketcan_interface/socketcan.h>
+#include <can_interface/bcm.h>
+#include <can_interface/socketcan.h>
 #include <canopen_master/canopen.h>
 
 namespace canopen {
@@ -29,7 +29,7 @@ class BCMsync : public Layer {
     std::set<int> started_nodes_;
 
     bool sync_running_;
-    can::BCMsocket bcm_;
+    can::SocketCANBCMsocket bcm_;
     boost::shared_ptr<can::SocketCANDriver>  driver_;
     uint16_t sync_ms_;
     can::CommInterface::FrameListener::Ptr handler_;

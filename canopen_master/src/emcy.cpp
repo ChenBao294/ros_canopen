@@ -1,5 +1,5 @@
 #include <canopen_master/canopen.h>
-#include <socketcan_interface/string.h>
+#include <can_interface/string.h>
 
 using namespace canopen;
 

@@ -5,7 +5,7 @@
 #include <canopen_master/can_layer.h>
 #include <canopen_chain_node/GetObject.h>
 #include <canopen_chain_node/SetObject.h>
-#include <socketcan_interface/string.h>
+#include <can_interface/string.h>
 #include <ros/ros.h>
 #include <std_srvs/Trigger.h>
 #include <diagnostic_updater/diagnostic_updater.h>
@@ -152,10 +152,10 @@ public:
     }
 };
 class RosChain : GuardedClassLoaderList, public canopen::LayerStack {
-    GuardedClassLoader<can::DriverInterface> driver_loader_;
+    GuardedClassLoader<can::SocketCANDriverInterface> driver_loader_;
     ClassAllocator<canopen::Master> master_allocator_;
 protected:
-    boost::shared_ptr<can::DriverInterface> interface_;
+    boost::shared_ptr<can::SocketCANDriverInterface> interface_;
     boost::shared_ptr<Master> master_;
     boost::shared_ptr<canopen::LayerGroupNoDiag<canopen::Node> > nodes_;
     boost::shared_ptr<canopen::LayerGroupNoDiag<canopen::EMCYHandler> > emcy_handlers_;
@@ -186,7 +186,7 @@ protected:
 
     struct HeartbeatSender{
       can::Frame frame;
-      boost::shared_ptr<can::DriverInterface> interface;
+      boost::shared_ptr<can::SocketCANDriverInterface> interface;
       bool send(){
           return interface && interface->send(frame);
       }

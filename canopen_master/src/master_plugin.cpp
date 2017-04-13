@@ -1,6 +1,6 @@
 #include <class_loader/class_loader.h>
 #include <canopen_master/master.h>
-#include <socketcan_interface/reader.h>
+#include <can_interface/reader.h>
 
 #include <set>
 

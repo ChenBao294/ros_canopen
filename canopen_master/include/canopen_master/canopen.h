@@ -1,9 +1,9 @@
 #ifndef H_CANOPEN
 #define H_CANOPEN
 
-#include <socketcan_interface/interface.h>
-#include <socketcan_interface/dispatcher.h>
-#include <socketcan_interface/reader.h>
+#include <can_interface/interface.h>
+#include <can_interface/dispatcher.h>
+#include <can_interface/reader.h>
 #include "exceptions.h"
 #include "layer.h"
 #include "objdict.h"

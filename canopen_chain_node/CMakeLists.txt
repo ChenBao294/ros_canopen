@@ -9,7 +9,7 @@ find_package(catkin REQUIRED
     pluginlib
     roscpp
     roslib
-    socketcan_interface
+    can_interface
     std_msgs
     std_srvs
 )
@@ -37,7 +37,7 @@ catkin_package(
     message_runtime
     pluginlib
     roscpp
-    socketcan_interface
+    can_interface
     std_srvs
   DEPENDS
     Boost

@@ -1,14 +1,14 @@
 #ifndef H_CAN_LAYER
 #define H_CAN_LAYER
 
-#include <socketcan_interface/threading.h>
+#include <can_interface/threading.h>
 #include "layer.h"
 
 namespace canopen{
 
 class CANLayer: public Layer{
     boost::mutex mutex_;
-    boost::shared_ptr<can::DriverInterface> driver_;
+    boost::shared_ptr<can::SocketCANDriverInterface> driver_;
     const std::string device_;
     const bool loopback_;
     can::Frame last_error_;
@@ -21,7 +21,7 @@ class CANLayer: public Layer{
     boost::shared_ptr<boost::thread> thread_;
 
 public:
-    CANLayer(const boost::shared_ptr<can::DriverInterface> &driver, const std::string &device, bool loopback)
+    CANLayer(const boost::shared_ptr<can::SocketCANDriverInterface> &driver, const std::string &device, bool loopback)
     : Layer(device + " Layer"), driver_(driver), device_(device), loopback_(loopback) { assert(driver_); }
 
     virtual void handleRead(LayerStatus &status, const LayerState &current_state) {
@@ -70,7 +70,7 @@ public:
         } else {
             can::StateWaiter waiter(driver_.get());
 
-            thread_.reset(new boost::thread(&can::DriverInterface::run, driver_));
+            thread_.reset(new boost::thread(&can::SocketCANDriverInterface::run, driver_));
             error_listener_ = driver_->createMsgListener(can::ErrorHeader(), can::CommInterface::FrameDelegate(this, &CANLayer::handleFrame));
 	    
 	    if(!waiter.wait(can::State::ready, boost::posix_time::seconds(1))){

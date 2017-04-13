@@ -1,5 +1,5 @@
 #include <canopen_master/objdict.h>
-#include <socketcan_interface/string.h>
+#include <can_interface/string.h>
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/ini_parser.hpp>
 #include <boost/foreach.hpp>

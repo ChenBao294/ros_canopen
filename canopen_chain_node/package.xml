@@ -24,7 +24,7 @@
   <depend>pluginlib</depend>
   <depend>roslib</depend>
   <depend>roscpp</depend>
-  <depend>socketcan_interface</depend> <!-- direct dependency needed for pluginlib look-up -->
+  <depend>can_interface</depend> <!-- direct dependency needed for pluginlib look-up -->
   <depend>std_msgs</depend>
   <depend>std_srvs</depend>
 

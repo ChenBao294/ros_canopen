@@ -10,7 +10,7 @@
   <url type="repository">https://github.com/ros-industrial/ros_canopen</url>
   <url type="bugtracker">https://github.com/ros-industrial/ros_canopen/issues</url>
 
-  <maintainer email="mathias.luedtke@ipa.fraunhofer.de">Mathias Lüdtke</maintainer>
+  <maintainer email="software@autonomoustuff.com">AutonomouStuff Software Team</maintainer>
   <author email="fmw@ipa.fhg.de">Florian Weisshardt</author>
 
   <buildtool_depend>catkin</buildtool_depend>
@@ -21,8 +21,8 @@
   <exec_depend>canopen_master</exec_depend>
   <exec_depend>canopen_motor_node</exec_depend>
   <!--exec_depend>canopen_test_utils</exec_depend-->
-  <exec_depend>socketcan_bridge</exec_depend>
-  <exec_depend>socketcan_interface</exec_depend>
+  <exec_depend>can_bridge</exec_depend>
+  <exec_depend>can_interface</exec_depend>
 
   <export>
     <metapackage/>

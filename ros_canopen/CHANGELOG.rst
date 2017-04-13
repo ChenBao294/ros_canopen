@@ -2,6 +2,10 @@
 Changelog for package ros_canopen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.3 (2017-04-11)
+------------------
+* Added Kvaser Canlib support
+
 0.7.2 (2017-03-28)
 ------------------
 

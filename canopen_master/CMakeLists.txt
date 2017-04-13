@@ -4,7 +4,7 @@ project(canopen_master)
 find_package(catkin REQUIRED
   COMPONENTS
     class_loader
-    socketcan_interface
+    can_interface
 )
 
 find_package(Boost REQUIRED
@@ -20,7 +20,7 @@ catkin_package(
   LIBRARIES
     canopen_master
   CATKIN_DEPENDS
-    socketcan_interface
+    can_interface
   DEPENDS
     Boost
 )

@@ -1,5 +1,5 @@
 #include <canopen_master/bcm_sync.h>
-#include <socketcan_interface/string.h>
+#include <can_interface/string.h>
 #include <canopen_master/can_layer.h>
 #include <ros/ros.h>
 #include <diagnostic_updater/diagnostic_updater.h>

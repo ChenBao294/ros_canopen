@@ -1,7 +1,7 @@
 #ifndef H_OBJDICT
 #define H_OBJDICT
 
-#include <socketcan_interface/FastDelegate.h>
+#include <can_interface/FastDelegate.h>
 #include <boost/unordered_map.hpp>    
 #include <boost/unordered_set.hpp>    
 #include <boost/thread/mutex.hpp>    
