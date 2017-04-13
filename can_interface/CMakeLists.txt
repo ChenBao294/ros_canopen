@@ -46,15 +46,15 @@ target_link_libraries(socketcan_dump
 )
 
 # canlib_dump
-add_executable(canlib_dump
-  src/canlib_dump.cpp
-)
+# add_executable(canlib_dump
+#   src/canlib_dump.cpp
+# )
 
-target_link_libraries(canlib_dump
-   can_interface_string
-   ${catkin_LIBRARIES}
-   ${Boost_LIBRARIES}
-)
+# target_link_libraries(canlib_dump
+#    can_interface_string
+#    ${catkin_LIBRARIES}
+#    ${Boost_LIBRARIES}
+# )
 
 # socketcan_bcm
 add_executable(socketcan_bcm
@@ -68,15 +68,15 @@ target_link_libraries(socketcan_bcm
 )
 
 # canlib_bcm
-add_executable(canlib_bcm
-  src/canlib_bcm.cpp
-)
+# add_executable(canlib_bcm
+#   src/canlib_bcm.cpp
+# )
 
-target_link_libraries(canlib_bcm
-   can_interface_string
-   ${catkin_LIBRARIES}
-   ${Boost_LIBRARIES}
-)
+# target_link_libraries(canlib_bcm
+#    can_interface_string
+#    ${catkin_LIBRARIES}
+#    ${Boost_LIBRARIES}
+# )
 
 # socketcan_interface_plugin
 add_library(socketcan_interface_plugin
@@ -101,8 +101,8 @@ install(
     socketcan_bcm
     socketcan_dump
     socketcan_interface_plugin
-    canlib_bcm
-    canlib_dump
+#    canlib_bcm
+#    canlib_dump
     canlib_interface_plugin
     can_interface_string
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
